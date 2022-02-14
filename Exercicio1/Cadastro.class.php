@@ -28,7 +28,7 @@ class Cadastro {
               ':userName' => $informacao['userName'],
               ':zipCode' => $informacao['zipCode'],
               ':email' => $informacao['email'],
-              ':password' => $informacao['password']
+              ':password' => MD5($informacao['password'])
             ));
 
             echo $sql->rowCount();
